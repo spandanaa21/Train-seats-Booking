@@ -1,0 +1,36 @@
+<div class="seat-booking-container">
+<h1>Train Seat Booking</h1>
+
+<!-- Input to book seats -->
+<div class="input-container">
+  <label for="seatInput">Enter the number of seats to book (1-7):</label>
+  <input
+    type="number"
+    id="seatInput"
+    [(ngModel)]="numSeats"
+    min="1"
+    max="7"
+  />
+  <button (click)="bookSeats(numSeats)">Book Seats</button>
+</div>
+
+<!-- Display the coach seat layout -->
+<div class="coach-container">
+  <div class="row" *ngFor="let row of seats; let rowIndex = index">
+    <div
+      class="seat"
+      *ngFor="let seat of row; let seatIndex = index"
+      [class.booked]="seat"
+      [class.available]="!seat"
+    >
+      {{ rowIndex * 7 + seatIndex + 1 }}
+    </div>
+  </div>
+</div>
+
+<!-- Display the selected seats after booking -->
+<div class="selected-seats-container" *ngIf="selectedSeats.length > 0">
+  <h3>Selected Seats:</h3>
+  <div class="seat" *ngFor="let seat of selectedSeats">{{ seat }}</div>
+</div>
+</div>

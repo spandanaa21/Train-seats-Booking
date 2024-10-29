@@ -1,0 +1,118 @@
+/* Container for the entire seat booking section */
+.seat-booking-container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Styling for the input section */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.input-container input {
+  padding: 8px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.input-container button {
+  padding: 8px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-container button:hover {
+  background-color: #218838;
+}
+
+/* Styling for the coach container that holds seat rows */
+.coach-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Styling each row of seats */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Styling each individual seat */
+.seat {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Seat colors based on availability */
+.available {
+  background-color: rgb(17, 190, 104);
+}
+
+.booked {
+  background-color: #ff4444;
+  color: white;
+}
+
+/* Styling the last row with only 3 seats */
+.last-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for displaying booked seats after the user makes a booking */
+.selected-seats-container {
+  margin-top: 20px;
+}
+
+.selected-seats-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.selected-seats-container .seat {
+  background-color: #007bff;
+  color: white;
+  margin-right: 5px;
+}
+
+.selected-seats-container .seat {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
